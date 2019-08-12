@@ -1,6 +1,8 @@
 var path = require('path')
 var webpack = require('webpack')
 const NODE_ENV = process.env.NODE_ENV
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   // entry: './src/main.js',
@@ -70,6 +72,21 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    // make sure to include the plugin for the magic
+    new VueLoaderPlugin()
+  ],
+  optimization: {
+    minimizer: [
+      new UglifyJSPlugin({
+          uglifyOptions: {
+            output: {
+              comments: false
+            }
+          }
+      })
+    ]
+  },
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js'
@@ -87,23 +104,18 @@ module.exports = {
 }
 
 if (process.env.NODE_ENV === 'production') {
-  // http://vue-loader.vuejs.org/en/workflow/production.html
+  module.exports.mode = "production"
   module.exports.plugins = (module.exports.plugins || []).concat([
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: '"production"'
       }
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
-      compress: {
-        warnings: false
-      }
-    }),
     new webpack.LoaderOptionsPlugin({
       minimize: true
     })
   ])
+
 }else {
   module.exports.devtool = '#eval-source-map'
 }
