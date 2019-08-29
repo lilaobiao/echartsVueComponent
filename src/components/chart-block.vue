@@ -89,6 +89,11 @@ const ChartBlock = {
         this.chart.setOption(option)
       }
     },
+    setLoading(flag = true, reset = false){
+      if(flag) this.isNodata = false
+      this.isLoading = flag
+      if(reset) this.reset()
+    },
     resize() {
       this.chart && this.chart.resize()
     },
@@ -110,6 +115,11 @@ const ChartBlock = {
       el.removeAttribute('_echarts_instance_')
       el.removeAttribute('style')
       this.init()
+    },
+    reInit(){
+      this.reset()
+      this.isLoading = true
+      this.isNodata = false
     },
     resetOption(option) {
       this.reset()

@@ -6,9 +6,12 @@
     "echarts",
     "echartsComponents"
   ],
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "lilaobiao(http://www.liguixing.com)",
-  "github": "https://github.com/lilaobiao/echartsVueComponent",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lilaobiao/echartsVueComponent.git"
+  },
   "license": "MIT",
   "private": false,
   "main": "./dist/echarts-vue-component.js",

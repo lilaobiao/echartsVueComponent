@@ -53,3 +53,9 @@
   "webpack-dev-server": "^3.8.0"
 }
 ```
+
+### 1.2.0
+
+1、添加了 reInit 和 setLoading 两个方法
+
+仓库地址：https://github.com/lilaobiao/echartsVueComponent

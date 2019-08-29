@@ -135,6 +135,12 @@ import { throttle } from 'echarts-vue-component'
 // window.addEventListener('resize',fn1)
 ```
 
+5、假如有一个线性图表，已经展示了数据，但当我们切换选项的时候，需要重新发请求，并且展示的图表跟原来不一样（假设为饼图），你可以在请求前调用一下 reInit 方法，该方法会自动重置图表，并回到数据加载状态
+
+6、假如有一个线性图表已经渲染完成，需要重新请求数据（不改变图表类型时），可在请求数据前调用 setLoading 方法进入加载状态。
+>setLoading 默认会将 isLoading 设置为 true，重现加载动画，也可以通过调用 setLoading(false) 关闭加载状态。
+>setLoading 支持第二个参数，如果传 true，则会重新初始化图表。setLoading(true,true) 效果等同于 reInit。
+
 
 ## 更新日志
 
@@ -174,6 +180,11 @@ import { throttle } from 'echarts-vue-component'
 
 ### 1.0.3
 
+1、文档修改
+
+
+### 1.0.4
+
 1、删除了测试阶段没有用到的文件
 
 
@@ -202,3 +213,7 @@ import { throttle } from 'echarts-vue-component'
   "webpack-dev-server": "^3.8.0"
 }
 ```
+
+### 1.2.0
+
+1、添加了 reInit 和 setLoading 两个方法
