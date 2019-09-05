@@ -58,4 +58,8 @@
 
 1、添加了 reInit 和 setLoading 两个方法
 
+### 1.3.0
+
+1、添加了三个 prop 属性：tip-color,tip-fontsize,loading-iconsize，用于自定义默认提示的文字大小和颜色
+
 仓库地址：https://github.com/lilaobiao/echartsVueComponent

@@ -8,7 +8,6 @@
   right: 0;
   top: 0;
   bottom: 0;
-
 }
 ._chart_wh_full {
   width: 100%;
@@ -16,16 +15,19 @@
   display: flex;
   align-items: center;
 }
-._chart_loading_gif{
+/* ._chart_loading_gif{
   width:40px;
   height:40px;
   margin:10px auto;
   background:url(./loading.gif) no-repeat;
   background-size:100% 100%;
+} */
+._chart_loading_svg{
+  display: inline-block;
+  margin: 10px;
 }
 ._chart_tip_text{
   margin: 10px;
   font-size: 14px;
   text-align: center;
-  color: #999;
 }

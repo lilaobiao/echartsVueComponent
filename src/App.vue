@@ -44,6 +44,15 @@
           </chart-block>
         </div>
       </li>
+      <li class="block">
+        <div class="desc">通过prop设置加载提示的大小和颜色</div>
+        <div class="chart-box">
+          <chart-block ref="chartdiy3"
+          tip-color="#5793f3"
+          :tip-fontsize="18"
+          :loading-iconsize="50"></chart-block>
+        </div>
+      </li>
     </ul>
     <h4>自动响应窗口宽度和改变图表类型</h4>
     <ul class="chart-block-list clearfix" style="width:80%;min-width:800px;">
