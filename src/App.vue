@@ -77,7 +77,6 @@
 
 <script>
 import ChartBlock from './components/chart-block'
-
 import { echarts, throttle } from './index'
 
 var colors = ['#5793f3', '#d14a61', '#675bba'];
@@ -226,6 +225,7 @@ let optionPie = {
 
 let throttleFn = throttle(function(){
   console.log('测试throttle')
+  console.log(echarts)
 },300)
 
 export default {
@@ -254,6 +254,7 @@ export default {
     this.$refs.chartdiy2.setOption(option)
     this.$refs.chartr1.setOption(option2)
     this.$refs.chartr2.setOption(option2)
+    // 测试throttle方法
     window.addEventListener('resize',throttleFn)
   },
   beforeDestroy(){
