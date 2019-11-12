@@ -109,6 +109,10 @@ const ChartBlock = {
     loadingIconsize: {
       type: Number,
       default: 30
+    },
+    throttleTime: {
+      type: Number,
+      default: 300
     }
   },
   data() {
@@ -129,7 +133,7 @@ const ChartBlock = {
         this.chart.setOption(option)
       }
     },
-    setLoading(flag = true, reset = false){
+    setLoading(flag = true, reset = false) {
       if(flag) this.isNodata = false
       this.isLoading = flag
       if(reset) this.reset()
@@ -144,9 +148,9 @@ const ChartBlock = {
       this.chart = echarts.init(this.$refs.chartEl)
       this.chart.setOption(this.option)
       let _chart = this.chart
-      this.chart.__resize = throttle(function () {
+      _chart.__resize = throttle(function() {
         _chart.resize()
-      }, 200)
+      }, this.throttleTime)
       window.addEventListener('resize', this.chart.__resize)
     },
     reset() {
@@ -156,7 +160,7 @@ const ChartBlock = {
       el.removeAttribute('style')
       this.init()
     },
-    reInit(){
+    reInit() {
       this.reset()
       this.isLoading = true
       this.isNodata = false
@@ -170,7 +174,7 @@ const ChartBlock = {
     option: {
       handler(newValue) {
         if (this.autoUpdate && this.chart) {
-          this.chart.setOption(newValue)
+          this.setOption(newValue)
         }
       },
       immediate: true,
