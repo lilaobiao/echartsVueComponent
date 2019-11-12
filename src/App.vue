@@ -22,6 +22,15 @@
         </div>
       </li>
     </ul>
+    <!-- <ul class="chart-block-list clearfix">
+      <li class="block">
+        <textarea style="width:100%;height:100%;">
+          <div class="chart-box">
+            <chart-block ref="chart1"></chart-block>
+          </div>
+        </textarea>
+      </li>
+    </ul> -->
     <h4>自定义loading和nodata视图</h4>
     <ul class="chart-block-list clearfix">
       <li class="block">

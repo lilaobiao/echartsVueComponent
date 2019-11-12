@@ -5,11 +5,11 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
-  // entry: './src/main.js',
-  entry: NODE_ENV == 'development' ? './src/main.js' : './src/index.js',
+  // entry: './src/main.js',development
+  entry: NODE_ENV === 'production' ? './src/index.js' : './src/main.js',
   output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
+    path: path.resolve(__dirname, NODE_ENV === 'production' ? './dist' : './demo'),
+    publicPath: NODE_ENV === 'production' ? '/dist/' : '/demo/',
     filename: 'echarts-vue-component.js',
     library: 'echarts-vue-component', // 指定的就是你使用require时的模块名
     libraryTarget: 'umd',// 指定输出格式

@@ -23,6 +23,8 @@ echarts-vue-component 是一个为 Vue 定制化的 echats 图表组件，不仅
 
 <img src="http://www.liguixing.com/wp-content/uploads/2019/08/echarts-vue-component.png" width="800">
 
+[点击查看](http://liguixing.com/echarts-vue-component/index.html)
+
 ## Install
 
 1. npm安装

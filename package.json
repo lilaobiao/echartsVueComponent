@@ -6,7 +6,7 @@
     "echarts",
     "echartsComponents"
   ],
-  "version": "1.4.1",
+  "version": "1.4.3",
   "author": "lilaobiao(http://www.liguixing.com)",
   "repository": {
     "type": "git",
@@ -17,7 +17,8 @@
   "main": "./dist/echarts-vue-component.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "build:demo": "cross-env NODE_ENV=demo webpack --progress --hide-modules"
   },
   "dependencies": {
     "echarts": "^4.2.1"
