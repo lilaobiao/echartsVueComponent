@@ -63,3 +63,7 @@
 1、添加了三个 prop 属性：tip-color,tip-fontsize,loading-iconsize，用于自定义默认提示的文字大小和颜色
 
 仓库地址：https://github.com/lilaobiao/echartsVueComponent
+
+### 1.3.1
+
+1、更换了一个导入导出的语法

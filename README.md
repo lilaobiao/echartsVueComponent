@@ -21,9 +21,11 @@ echarts-vue-component 是一个为 Vue 定制化的 echats 图表组件，不仅
 
 **组件展示**
 
+[你可以点击这里查看实际效果](http://liguixing.com/echarts-vue-component/index.html)<br/>
+[click here to view the actual effect](http://liguixing.com/echarts-vue-component/index.html)
+
 <img src="http://www.liguixing.com/wp-content/uploads/2019/08/echarts-vue-component.png" width="800">
 
-[点击查看](http://liguixing.com/echarts-vue-component/index.html)
 
 ## Install
 
@@ -179,6 +181,13 @@ import { throttle } from 'echarts-vue-component'
 8. 假如有一个线性图表已经渲染完成，需要重新请求数据（不改变图表类型时），可在请求数据前调用 setLoading 方法进入加载状态。
 >setLoading 默认会将 isLoading 设置为 true，重现加载动画，也可以通过调用 setLoading(false) 关闭加载状态。
 >setLoading 支持第二个参数，如果传 true，则会重新初始化图表。setLoading(true,true) 效果等同于 reInit。
+
+
+## 问题反馈
+
+如果你在使用过程中遇到了任何问题，或者有什么好的建议，请加微信沟通
+
+<img src="http://liguixing.com/wp-content/uploads/2019/11/%E4%B8%AA%E4%BA%BA%E5%BE%AE%E4%BF%A1.png" width="150">
 
 
 ## 重大版本更新日志
