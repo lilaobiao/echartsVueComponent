@@ -21,10 +21,9 @@ echarts-vue-component is a echats chart component customized for Vuex, which is 
 7、The component only depends on a plug-in library of echarts. The integrated echarts version is 4.2.1. It also provides an interface to return to echarts. After installing the component, you don't need to install echarts yourself;
 
 
-**组件展示**
+**Component Show**
 
-[你可以点击这里查看实际效果](http://liguixing.com/echarts-vue-component/index.html)<br/>
-[click here to view the actual effect](http://liguixing.com/echarts-vue-component/index.html)
+[click here to view the effect](http://liguixing.com/echarts-vue-component/index.html)
 
 <img src="http://www.liguixing.com/wp-content/uploads/2019/08/echarts-vue-component.png" width="800">
 
@@ -62,7 +61,7 @@ export default {
 ```
 
 
-## Use it
+## Use
 
 ### 一、Simple use
 
@@ -88,23 +87,6 @@ When using the above method, a watch monitor {deep: true} is added inside the co
 
 **Hint 1：** From the perspective of Vue, the above method is not recommended. see
 <a href="http://liguixing.com/archives/1068" target="_blank">如何在vue中优雅的使用echarts</a>
-
-**Hint 2：** 因为 echarts 图表必须要有真实的 dom 元素存在于页面上才能渲染，这是无论如何封装也改变不了的事实，所以 echarts-vue-component 虽然支持通过设置 option 的形式自动渲染，但内部的原理其实还是在 mounted 钩子（即元素渲染完成后）里面手动的调用了一次 setOption 而已。并且，由于 vue 的限制，通过 prop 绑定一个 js 对象的方式必须要做深度数据监听才能感知到数据变化，如下：
-```
-watch: {
-  option: {
-    handler(newValue) {
-      if (this.autoUpdate && this.chart) {
-        this.setOption(newValue)
-      }
-    },
-    immediate: true,
-    deep: true
-  }
-}
-```
-上面这段代码，会让你的加载状态变得不可控（只要 option 变化，就会调用 setOption 方法，导致你的加载状态变为 false ）。所以，个人还是建议不要使用绑定 option 的方式来使用（除非你的数据是已知的，或者你一次渲染图表后不会再做任何修改）。
-
 
 The following usage is recommended
 
@@ -141,7 +123,7 @@ export default {
   </div>
 </chart-block>
 ```
-**Hint:** 自定义的加载和空提示样式需自己定义，同时如果自定义了 slot，prop 上的文字颜色和字体大小等属性不再起作用
+**Hint:** Custom loading and empty prompt styles need to be defined by themselves. If the slot is customized, properties such as text color and font size on the prop no longer work.
 
 3. To reset the chart
 

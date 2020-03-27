@@ -24,7 +24,6 @@ echarts-vue-component 是一个为 Vue 定制化的 echats 图表组件，不仅
 **组件展示**
 
 [你可以点击这里查看实际效果](http://liguixing.com/echarts-vue-component/index.html)<br/>
-[click here to view the actual effect](http://liguixing.com/echarts-vue-component/index.html)
 
 <img src="http://www.liguixing.com/wp-content/uploads/2019/08/echarts-vue-component.png" width="800">
 
